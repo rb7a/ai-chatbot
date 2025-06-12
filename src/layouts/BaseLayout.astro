@@ -1,0 +1,24 @@
+---
+import './src/styles/global.css' 
+import SideBar from "../components/SideBar.astro"
+import Background from '../components/Background.astro'
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI - Chatbot</title>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="flex">
+        <SideBar/>
+        <Background/>
+
+        <main class="flex-1 ml-64 p-8">
+            <slot/>
+        </main>
+    </div>
+</body>
+</html>
