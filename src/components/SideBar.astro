@@ -1,34 +1,89 @@
 ---
 import Add from "./Icons/Add.astro";
-
-
-
+import ContractIcon from "./Icons/ContractIcon.astro";
+import ExpandIcon from "./Icons/ExpandIcon.astro";
+import MessageIcon from "./Icons/MessageIcon.astro";
+import EditIcon from "./Icons/EditIcon.astro";
+import DeleteIcon from "./Icons/DeleteIcon.astro";
 ---
 
-<aside class="w-64 relative bg-gray-800 text-white h-screen left-0 top-0 p-4">
-    <div class="flex">
-        <img src="" alt="">
-        <h2 class="font-bold mb-6 border-b border-gray-700 pb-4">simplechat.ai</h2>
-    </div>
+<aside class="w-96 relative bg-black/90 text-white h-screen left-0 top-0 p-4 z-[999]">
+  <div class="flex w-full justify-between mx-1">
+    <h2 class="font-bold mb-6 border-gray-700 pb-4 flex items-center gap-x-3.5 text-lg">
+      <img src="https://avatars.githubusercontent.com/u/99742065?s=48&v=4" alt="avatar" class="size-8 rounded-sm"/>
+      simplechat.ai
+    </h2>
+    <ContractIcon />
+  </div>
 
-    <section>
-        <button class="flex items-center gap-2 w-full px-4 py-2 rounded hover:bg-gray-700 transition">
-            <Add class="hidden" />
-            <h2 class="font-bold">New chat</h2>
-        </button>
-    </section>
-  
+  <div>
+    <button
+      class="flex items-center gap-2 w-full px-4 border-1 border-gray-600 shadow-2xl py-2 rounded-lg hover:bg-gray-700 transition"
+    >
+      <Add class="text-gray-300/80" />
+      <h2 class="font-bold text-gray-300/80">New chat</h2>
+    </button>
+  </div>
+
+  <style>
+    .chats:hover .iconsDeleteAndEdit {
+      display: flex;
+    }
+
+  </style>
+
   <nav>
-    <h3 class="text-sm uppercase text-gray-400 mb-2">Conversations</h3>
-    <ul class="space-y-2">
-      <li>
-        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-700 transition">What is your job?</a>
+    <h3 class="text-sm uppercase text-gray-400 mb-2 mt-6">Conversations</h3>
+    <ul class="gap-y-3 flex flex-col">
+      <li
+        class="chats flex items-center cursor-pointer justify-between rounded hover:bg-gray-700 transition px-2"
+      >
+        <a
+          href="#"
+          class="flex items-center gap-x-4 px-3 py-2 rounded hover:bg-gray-700 transition"
+        >
+          <MessageIcon />
+          What is your job?</a
+        >
+        <div class="iconsDeleteAndEdit hidden gap-x-2.5">
+          <EditIcon />
+          <DeleteIcon />
+        </div>
       </li>
-      <li>
-        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-700 transition">What is your hobby?</a>
+
+      <li
+        class="chats flex items-center cursor-pointer justify-between rounded hover:bg-gray-700 transition px-2"
+      >
+        <a
+          href="#"
+          class="flex items-center gap-x-4 px-3 py-2 rounded hover:bg-gray-700 transition"
+        >
+          <MessageIcon />
+          What is your hobby?</a
+        >
+        <div class="iconsDeleteAndEdit hidden gap-x-2.5">
+          <EditIcon />
+          <DeleteIcon />
+        </div>
       </li>
-      <li>
-        <a href="#" class="block px-3 py-2 rounded hover:bg-gray-700 transition">What's your favourite movie?</a>
+
+      <li
+        class="chats lastChat flex items-center cursor-pointer justify-between rounded hover:bg-gray-700 transition px-2"
+      >
+        <a
+          href="#"
+          class="flex items-center gap-x-4 px-3 py-2 rounded hover:bg-gray-700 transition"
+        >
+          <MessageIcon id="msgLongMessage"/>
+
+  favourite movie?
+
+          </a
+        >
+        <div class="iconsDeleteAndEdit hidden gap-x-2.5">
+          <EditIcon />
+          <DeleteIcon />
+        </div>
       </li>
     </ul>
   </nav>
