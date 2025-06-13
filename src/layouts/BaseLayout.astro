@@ -1,6 +1,7 @@
 ---
 import './src/styles/global.css' 
 import SideBar from "../components/SideBar.astro"
+import ContainerChat from "../components/ContainerChat.astro"
 import Background from '../components/Background.astro'
 ---
 
@@ -15,8 +16,7 @@ import Background from '../components/Background.astro'
     <div class="flex">
         <SideBar/>
         <Background/>
-
-        <main class="flex-1 ml-64 p-8">
+        <main class="flex-1">
             <slot/>
         </main>
     </div>

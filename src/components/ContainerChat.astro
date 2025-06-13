@@ -1,0 +1,16 @@
+---
+import SendIcon from "./Icons/SendIcon.astro";
+---
+
+<section class="absolute w-full h-screen flex justify-center items-center">
+    <div class="w-[800px] h-[600px] bg-[#252527] rounded-xl border-gray-500 border-[1.4px] relative">
+        <label class="flex">
+            <input
+            type="text"
+            class="text-white w-full border-2 border-gray-400/90 bottom-0 flex absolute py-2 px-3 rounded-lg font-bold"
+            placeholder="Ask for anything"
+            />
+            <SendIcon class="text-gray-300/80 absolute bottom-2 right-2"/>
+        </label>
+    </div>
+</section>
