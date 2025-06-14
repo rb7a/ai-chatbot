@@ -1,10 +1,6 @@
 ---
-import './src/styles/global.css' 
-import SideBar from "../components/SideBar.astro"
-import ContainerChat from "../components/ContainerChat.astro"
-import Background from '../components/Background.astro'
+import './src/styles/global.css'
 ---
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,13 +8,9 @@ import Background from '../components/Background.astro'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI - Chatbot</title>
 </head>
-<body class="bg-gray-100 min-h-screen">
-    <div class="flex">
-        <SideBar/>
-        <Background/>
-        <main class="flex-1">
-            <slot/>
-        </main>
+<body class="bg-[#252527] min-h-screen">
+    <div class="flex h-screen"> 
+        <slot/>
     </div>
 </body>
 </html>

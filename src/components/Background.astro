@@ -2,8 +2,15 @@
 import ContainerChat from "./ContainerChat.astro"
 ---
 
-<div class="flex w-full h-screen bg-[#252527]">
-    <img class="w-full h-[200px] object-cover" src="https://i.postimg.cc/6qgSfj7K/fondo-1.jpg" alt="Fondo de playa">
+<div class="relative flex-1"> 
+    
+    <img 
+        class="w-full h-[200px] object-cover" 
+        src="https://i.postimg.cc/6qgSfj7K/fondo-1.jpg" 
+        alt="Fondo de playa"
+    />
+    
+    <div class="absolute inset-0 flex justify-center items-start pt-14">
+        <ContainerChat/>
+    </div>
 </div>
-
-<ContainerChat/>
