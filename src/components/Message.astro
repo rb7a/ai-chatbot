@@ -1,0 +1,36 @@
+---
+import BotIcon from "./Icons/BotIcon.astro";
+import UserIcon from "./Icons/UserIcon.astro";
+
+const { sender, textMessage } = Astro.props;
+const isUser = sender === "user";
+---
+
+
+<div class={`flex items-start mb-4 ${isUser ? 'justify-end' : 'justify-start'}`}>
+  {isUser ? (
+    <>
+      <div
+        class={`
+          bg-gray-700 text-white max-w-[75%] break-words px-4 py-3 ml-2
+          rounded-3xl rounded-br-none
+        `}
+      >
+        {textMessage}
+      </div>
+      <UserIcon class="ml-2 mt-1 w-6 h-6 text-white" />
+    </>
+  ) : (
+    <>
+      <BotIcon class="mr-2 mt-1 w-6 h-6 text-white" />
+      <div
+        class={`
+          bg-[#266dde] text-white max-w-[75%] break-words px-4 py-3
+          rounded-3xl rounded-bl-none
+        `}
+      >
+        {textMessage}
+      </div>
+    </>
+  )}
+</div>

@@ -1,11 +1,13 @@
 ---
 import SendIcon from "./Icons/SendIcon.astro";
+import Message from "./Message.astro";
 ---
 
 <div class="w-[900px] h-[580px] bg-[#252527] rounded-xl border border-gray-500 relative mx-auto"> {/* mx-auto para centrado adicional */}
     {/* Área del chat */}
-    <div class="h-[calc(100%-60px)] overflow-y-auto">
-        {/* Mensajes aparecerán aquí */}
+    <div class="h-[calc(100%-60px)] overflow-y-auto px-6 pt-4">
+        <Message sender="user" textMessage="Hello there!" />
+        <Message sender="bot" textMessage="Hi! How can I help you?" />
     </div>
     
     {/* Input */}
