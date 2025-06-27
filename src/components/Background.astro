@@ -1,5 +1,5 @@
 ---
-import ContainerChat from "./ContainerChat.astro"
+import ContainerChat from "./ContainerChat"
 ---
 
 <div class="relative flex-1"> 
@@ -11,6 +11,6 @@ import ContainerChat from "./ContainerChat.astro"
     />
     
     <div class="absolute inset-0 flex justify-center items-start pt-14">
-        <ContainerChat/>
+        <ContainerChat client:visible/>
     </div>
 </div>
