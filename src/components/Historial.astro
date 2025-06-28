@@ -1,0 +1,25 @@
+---
+import DeleteIcon from "./Icons/DeleteIcon.astro";
+import EditIcon from "./Icons/EditIcon.astro";
+import MessageIcon from "./Icons/MessageIcon.astro";
+
+// Receive the text prop
+const { text } = Astro.props;
+---
+
+<li
+  class="chats flex items-center cursor-pointer justify-between rounded hover:bg-gray-700 transition px-2 border-b-gray-400"
+>
+  <a
+    href="#"
+    class="flex items-center gap-x-4 px-3 py-2 rounded hover:bg-gray-700 transition text-white/50"
+  >
+    <MessageIcon />
+    {text}
+  </a>
+  <div class="iconsDeleteAndEdit hidden gap-x-2.5">
+    <EditIcon />
+    <DeleteIcon />
+  </div>
+  
+</li>
