@@ -6,12 +6,17 @@ import MessageIcon from "./Icons/MessageIcon.astro";
 import EditIcon from "./Icons/EditIcon.astro";
 import DeleteIcon from "./Icons/DeleteIcon.astro";
 import BotIcon from "./Icons/BotIcon.astro";
+import Historial from "./Historial.astro";
 ---
 
-<aside class="w-72 relative bg-black/90 text-white h-screen left-0 top-0 p-4 z-[999]">
+<aside
+  class="w-72 relative bg-black/90 text-white h-screen left-0 top-0 p-4 z-[999]"
+>
   <div class="flex w-full justify-between mx-1">
-    <h2 class="font-semibold mb-6 border-gray-700 pb-4 flex items-center gap-x-3.5 text-[16px]">
-      <BotIcon/>
+    <h2
+      class="font-semibold mb-6 border-gray-700 pb-4 flex items-center gap-x-3.5 text-[16px]"
+    >
+      <BotIcon />
       simplechat.ai
     </h2>
     <ContractIcon />
@@ -30,62 +35,14 @@ import BotIcon from "./Icons/BotIcon.astro";
     .chats:hover .iconsDeleteAndEdit {
       display: flex;
     }
-
   </style>
 
   <nav>
     <h3 class="text-sm uppercase text-gray-400 mb-2 mt-6">Conversations</h3>
-    <ul class="gap-y-3 flex flex-col">
-      <li
-        class="chats flex items-center cursor-pointer justify-between rounded hover:bg-gray-700 transition px-2"
-      >
-        <a
-          href="#"
-          class="flex items-center gap-x-4 px-3 py-2 rounded hover:bg-gray-700 transition"
-        >
-          <MessageIcon />
-          What is your job?</a
-        >
-        <div class="iconsDeleteAndEdit hidden gap-x-2.5">
-          <EditIcon />
-          <DeleteIcon />
-        </div>
-      </li>
-
-      <li
-        class="chats flex items-center cursor-pointer justify-between rounded hover:bg-gray-700 transition px-2"
-      >
-        <a
-          href="#"
-          class="flex items-center gap-x-4 px-3 py-2 rounded hover:bg-gray-700 transition"
-        >
-          <MessageIcon />
-          What is your hobby?</a
-        >
-        <div class="iconsDeleteAndEdit hidden gap-x-2.5">
-          <EditIcon />
-          <DeleteIcon />
-        </div>
-      </li>
-
-      <li
-        class="chats lastChat flex items-center cursor-pointer justify-between rounded hover:bg-gray-700 transition px-2"
-      >
-        <a
-          href="#"
-          class="flex items-center gap-x-4 px-3 py-2 rounded hover:bg-gray-700 transition"
-        >
-          <MessageIcon id="msgLongMessage"/>
-
-  favourite movie?
-
-          </a
-        >
-        <div class="iconsDeleteAndEdit hidden gap-x-2.5">
-          <EditIcon />
-          <DeleteIcon />
-        </div>
-      </li>
+    <ul class="gap-y-5 flex flex-col"> // TODO: Generate this but dynamic
+      {Array.from({ length: 4 }).map((_, i) => (
+        <Historial text="Just for do something" />
+      ))}
     </ul>
   </nav>
 </aside>
