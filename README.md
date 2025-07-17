@@ -1,47 +1,151 @@
-# Astro Starter Kit: Minimal
+# SimpleAI Chat 🤖
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+Un chatbot de inteligencia artificial moderno y responsivo construido con Astro, React y TypeScript. Ofrece una experiencia de chat intuitiva con soporte para múltiples conversaciones y un diseño elegante que funciona perfectamente en dispositivos móviles y de escritorio.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## ✨ Características
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- 💬 **Chat en tiempo real** con IA
+- 📱 **Diseño completamente responsivo** (móvil y escritorio)
+- 🗂️ **Múltiples conversaciones** con sidebar navegable
+- 🎨 **Interfaz moderna** con animaciones suaves
+- ⚡ **Construido con Astro** para máximo rendimiento
+- � **TypeScript** para mayor robustez del código
 
-## 🚀 Project Structure
+## � Capturas de Pantalla
 
-Inside of your Astro project, you'll see the following folders and files:
+### Versión Móvil
+
+<div align="center">
+  <img src="screenshots/mobile-welcome.png" alt="Pantalla de bienvenida móvil" width="300">
+</div>
+
+<div align="center">
+  <img src="screenshots/mobile-chat.png" alt="Chat activo móvil" width="300">
+  <p><em>Conversación activa en dispositivo móvil</em></p>
+</div>
+
+### Versión Escritorio
+
+<div align="center">
+  <img src="screenshots/desktop-welcome.png" alt="Pantalla de bienvenida escritorio" width="600">
+ 
+</div>
+
+<div align="center">
+  <img src="screenshots/desktop-chat.png" alt="Chat activo escritorio" width="600">
+</div>
+
+## 🚀 Estructura del Proyecto
+
+El proyecto está estructurado de la siguiente manera:
 
 ```text
-/
+ai-chatbot/
 ├── public/
+│   └── favicon.svg
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/          # Componentes React/Astro
+│   │   ├── AnimatedBackground.tsx
+│   │   ├── Background.astro
+│   │   ├── ContainerChat.tsx
+│   │   ├── Message.tsx
+│   │   ├── SideBar.tsx
+│   │   ├── TypingIndicator.tsx
+│   │   └── Icons/           # Iconos SVG
+│   ├── layouts/
+│   │   └── BaseLayout.astro # Layout base de la aplicación
+│   ├── pages/
+│   │   ├── index.astro      # Página principal
+│   │   ├── api/
+│   │   │   └── chat.ts      # API endpoint para el chat
+│   │   └── chat/
+│   │       └── [id].astro   # Páginas dinámicas de chat
+│   └── styles/
+│       └── global.css       # Estilos globales
+├── screenshots/             # Capturas de pantalla
+├── astro.config.mjs        # Configuración de Astro
+├── package.json
+├── pnpm-lock.yaml
+├── tsconfig.json
+└── README.md
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Tecnologías Utilizadas
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **[Astro](https://astro.build/)** - Framework web moderno para sitios estáticos
+- **[React](https://reactjs.org/)** - Biblioteca para interfaces de usuario
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript con tipado estático
+- **CSS3** - Estilos modernos con variables CSS y flexbox/grid
+- **[Tailwind CSS](https://tailwindcss.com/)** - Framework de utilidades para estilos rápidos y personalizables
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🧞 Comandos
 
-## 🧞 Commands
+Todos los comandos se ejecutan desde la raíz del proyecto en una terminal:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm install`            | Instala las dependencias                        |
+| `pnpm dev`                | Inicia el servidor de desarrollo en `localhost:4321` |
+| `pnpm build`              | Construye la aplicación para producción en `./dist/` |
+| `pnpm preview`            | Previsualiza la build localmente antes del deploy |
+| `pnpm astro ...`          | Ejecuta comandos CLI como `astro add`, `astro check` |
+| `pnpm astro -- --help`    | Obtiene ayuda usando la CLI de Astro            |
 
-## 👀 Want to learn more?
+## 🚀 Instalación y Uso
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. **Clona el repositorio:**
+   ```bash
+   git clone [URL_DEL_REPOSITORIO]
+   cd ai-chatbot
+   ```
+
+2. **Instala las dependencias:**
+   ```bash
+   pnpm install
+   ```
+
+3. **Inicia el servidor de desarrollo:**
+   ```bash
+   pnpm dev
+   ```
+
+4. **Abre tu navegador** y ve a `http://localhost:4321`
+
+## 📁 Funcionalidades Principales
+
+### � Sistema de Chat
+- Interfaz de chat intuitiva con mensajes del usuario y respuestas de la IA
+- Indicador de escritura mientras la IA procesa la respuesta
+- Soporte para conversaciones largas con scroll automático
+
+### 🗂️ Gestión de Conversaciones
+- Sidebar con lista de conversaciones guardadas
+- Posibilidad de crear nuevas conversaciones
+- Navegación entre diferentes chats
+
+### 📱 Diseño Responsivo
+- Optimizado para dispositivos móviles y tablets
+- Interfaz adaptativa que se ajusta al tamaño de pantalla
+- Menús colapsables en dispositivos pequeños
+
+## 🎨 Personalización
+
+El proyecto utiliza variables CSS para facilitar la personalización de colores y estilos. Puedes modificar el archivo `src/styles/global.css` para ajustar la apariencia según tus preferencias.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría realizar.
+
+## 📞 Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue en este repositorio.
+
+---
+
+<div align="center">
+  <p>Hecho con ❤️ usando Astro y React</p>
+</div>
