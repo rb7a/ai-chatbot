@@ -16,12 +16,10 @@ Un chatbot de inteligencia artificial moderno y responsivo construido con Astro,
 ### Versión Móvil
 
 <div align="center">
-  <img src="screenshots/mobile-welcome.png" alt="Pantalla de bienvenida móvil" width="300">
-</div>
-
-<div align="center">
-  <img src="screenshots/mobile-chat.png" alt="Chat activo móvil" width="300">
-  <p><em>Conversación activa en dispositivo móvil</em></p>
+    <div style="display: flex; gap: 16px; justify-content: center;">
+        <img src="screenshots/mobile-welcome.png" alt="Pantalla de bienvenida móvil" width="300">
+        <img src="screenshots/mobile-chat.png" alt="Chat activo móvil" width="300">
+    </div>
 </div>
 
 ### Versión Escritorio
