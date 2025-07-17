@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SideBar from "../components/SideBar.astro";
+import SideBar from "../components/SideBar";
 import Background from "../components/Background.astro";
+import AnimatedBackground from "../components/AnimatedBackground";
 ---
 
 <BaseLayout>
-	<SideBar/>
-    <Background/>
+  <AnimatedBackground client:load />
+  <SideBar client:load />
+  <Background />
 </BaseLayout>
-

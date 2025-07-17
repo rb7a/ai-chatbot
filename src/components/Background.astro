@@ -2,15 +2,8 @@
 import ContainerChat from "./ContainerChat"
 ---
 
-<div class="relative flex-1"> 
-    
-    <img 
-        class="w-full h-[200px] object-cover" 
-        src="https://i.postimg.cc/mk8yggSZ/fondo.png" 
-        alt="Fondo de playa"
-    />
-    
-    <div class="absolute inset-0 flex justify-center items-start pt-14">
+<div class="relative flex-1 min-h-screen flex items-center justify-center p-2 lg:p-4 lg:ml-0"> 
+    <div class="w-full max-w-6xl">
         <ContainerChat client:visible/>
     </div>
 </div>
