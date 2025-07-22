@@ -19,6 +19,7 @@
     "dotenv": "^17.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "rollup": "latest",
     "tailwindcss": "^4.1.10"
   }
 }
