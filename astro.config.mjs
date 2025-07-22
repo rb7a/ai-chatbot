@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
+import netlify from '@astrojs/netlify';
 import { config } from 'dotenv';
 
 import tailwindcss from '@tailwindcss/vite';
@@ -13,9 +13,7 @@ config();
 // https://astro.build/config
 export default defineConfig({
   output: 'server', // Habilitar server-side rendering para API routes
-  adapter: node({
-    mode: 'standalone'
-  }),
+  adapter: netlify(),
   vite: {
     plugins: [tailwindcss()]
   },
